@@ -3,3 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* stili background boolzapp */
+
+.top-bar{
+    height: 100px;
+    background-color: #009688;
+}
+
+main{
+    height: calc(100vh - 100px);
+    background-color: #d9dbd4;
+}
+
+
+/* stili app */
