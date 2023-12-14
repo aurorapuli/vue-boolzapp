@@ -26,7 +26,6 @@ main {
 .container {
     width: 80%;
     margin: 0 auto;
-    height: 500px;
     border: 1px solid black;
     display: flex;
     position: absolute;
@@ -64,7 +63,7 @@ nav {
     width: 100%;
 }
 
-.my-profile .fa-solid{
+.my-profile .fa-solid {
     color: #b0b0b0;
     margin-left: 10px;
 
@@ -72,50 +71,94 @@ nav {
 
 /* stili notifiche */
 
-.notifiche{
+.notifiche {
     display: flex;
     padding: 10px;
     background-color: #8edafc;
 }
-.bell{
+
+.bell {
     margin-right: 7px;
 }
-.fa-bell-slash{
+
+.fa-bell-slash {
     font-size: 25px;
     padding: 10px;
     background-color: white;
-    color:#8edafc;
+    color: #8edafc;
     border-radius: 50%;
 }
-.notifiche a{
+
+.notifiche a {
     color: gray;
 }
 
 /* stili search */
 
-.search{
+.search {
     padding: 10px;
     background-color: #eaeaea;
 }
 
-.search div{
+.search div {
     border: 1px solid #cbc9c9;
     border-radius: 10px;
     display: flex;
 }
 
-.fa-magnifying-glass{
+.fa-magnifying-glass {
     color: #b0b0b0;
     width: 55px;
     padding: 10px;
     background-color: white;
 }
 
-.search input{
+.search input {
     padding: 10px;
     border: none;
     width: 100%;
 }
+
+/* stili contacts */
+.contacts {
+    padding: 10px;
+    background-color: white;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #cbc9c9;
+}
+
+.contact-profile {
+    display: flex;
+}
+
+.contact-profile .img {
+    margin-right: 15px;
+}
+
+.gray {
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* stili area messaggi */
