@@ -47,6 +47,7 @@ nav {
     align-items: center;
     padding: 10px 10px;
     background-color: #eaeaea;
+    height: 50px;
 }
 
 .profile {
@@ -54,13 +55,11 @@ nav {
     align-items: center;
 }
 
-
-.img {
-    width: 45px;
-}
-
 .img img {
-    width: 100%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .my-profile .fa-solid {
@@ -106,7 +105,7 @@ nav {
     display: flex;
 }
 
-.fa-magnifying-glass {
+.search .fa-magnifying-glass {
     color: #b0b0b0;
     width: 55px;
     padding: 10px;
@@ -146,24 +145,83 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* stili area messaggi */
 
 .text-message {
     border: 1px solid black;
     width: 100%;
+}
+
+/* stili user-chat */
+
+.user-chat .img {
+    margin-right: 10px;
+}
+
+/* stili area testo */
+
+.area-testo {
+    background-image: url(../img/sfondo.jpg);
+    height: calc(100% - 100px);
+    background-color: #dbd3cd;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    width: 200px;
+    padding: 5px 10px 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* stili send message */
+.send-message {
+    display: flex;
+    padding: 10px 0;
+    background-color: #f3eeea;
+    align-items: center;
+    height: 50px;
+}
+
+.send-message .fa-solid,
+.send-message .fa-regular {
+    width: 50px;
+    font-size: 20px;
+    color: gray;
+    text-align: center;
+}
+
+.send-message input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #f3eeea;
+    border-radius: 5px;
+}
+
+
+
+/* stili specifici */
+
+.mio-text {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+
+
+.user-text {
+    background-color: white;
+}
+
+.orario-message{
+    font-size: 10px;
+    align-self: flex-end;
 }
