@@ -26,7 +26,6 @@ main {
 .container {
     width: 80%;
     margin: 0 auto;
-    border: 1px solid black;
     display: flex;
     position: absolute;
     top: 20px;
@@ -35,7 +34,6 @@ main {
 
 /* stili nav */
 nav {
-    border: 1px solid black;
     width: 900px;
 }
 
@@ -148,7 +146,6 @@ nav {
 /* stili area messaggi */
 
 .text-message {
-    border: 1px solid black;
     width: 100%;
 }
 

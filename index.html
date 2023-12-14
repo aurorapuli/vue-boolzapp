@@ -13,8 +13,8 @@
     <!-- Axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
 
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+     <!-- Vue -->
+     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+   
 
     <div id="app">
         <div class="top-bar">
@@ -69,111 +70,20 @@
 
                     <!-- section contacts -->
                     <div class="contacts">
-                        <div class="contact">
+                        <div class="contact" v-for="contact in contacts">
                             <div class="contact-profile">
                                 <div class="img">
-                                    <img src="img/avatar_io.jpg" alt="">
+                                    <img src="contact.avatar" alt="">
                                 </div>
                                 <div>
-                                    <h4>Michele</h4>
+                                    <h4>{{contact.name}}</h4>
                                     <div class="gray">Ultimo messaggio inviato</div>
 
                                 </div>
-
                             </div>
                             <div>
                                 <div class="gray">12:00</div>
                             </div>
-
-                        </div>
-                        <div class="contact">
-                            <div class="contact-profile">
-                                <div class="img">
-                                    <img src="img/luisa-avatar.png" alt="">
-                                </div>
-                                <div>
-                                    <h4>Michele</h4>
-                                    <div class="gray">Ultimo messaggio inviato</div>
-
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="gray">12:00</div>
-                            </div>
-
-                        </div>
-
-                        <div class="contact">
-                            <div class="contact-profile">
-                                <div class="img">
-                                    <img src="img/luisa-avatar.png" alt="">
-                                </div>
-                                <div>
-                                    <h4>Michele</h4>
-                                    <div class="gray">Ultimo messaggio inviato</div>
-
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="gray">12:00</div>
-                            </div>
-
-                        </div>
-
-                        <div class="contact">
-                            <div class="contact-profile">
-                                <div class="img">
-                                    <img src="img/luisa-avatar.png" alt="">
-                                </div>
-                                <div>
-                                    <h4>Michele</h4>
-                                    <div class="gray">Ultimo messaggio inviato</div>
-
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="gray">12:00</div>
-                            </div>
-
-                        </div>
-
-                        <div class="contact">
-                            <div class="contact-profile">
-                                <div class="img">
-                                    <img src="img/luisa-avatar.png" alt="">
-                                </div>
-                                <div>
-                                    <h4>Michele</h4>
-                                    <div class="gray">Ultimo messaggio inviato</div>
-
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="gray">12:00</div>
-                            </div>
-
-                        </div>
-
-                        <div class="contact">
-                            <div class="contact-profile">
-                                <div class="img">
-                                    <img src="img/luisa-avatar.png" alt="">
-                                </div>
-                                <div>
-                                    <h4>Michele</h4>
-                                    <div class="gray">Ultimo messaggio inviato</div>
-
-                                </div>
-
-                            </div>
-                            <div>
-                                <div class="gray">12:00</div>
-                            </div>
-
                         </div>
                     </div>
                 </nav>
