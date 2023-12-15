@@ -3,6 +3,11 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+
+            conversazioneUser: [],
+
+            activeContact: 0,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -171,6 +176,20 @@ createApp({
         }
     },
     methods: {
+        chat(i) {
+            this.activeContact = i
+
+
+            const conversazione = this.contacts[this.activeContact].messages;
+
+
+            for (i = 0; i < conversazione.length; i++) {
+                this.conversazioneUser.push(conversazione[i])
+                console.log(this.conversazioneUser);
+            }
+
+
+        }
 
     },
     mounted() {

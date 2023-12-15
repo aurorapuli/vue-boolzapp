@@ -161,12 +161,12 @@ nav {
     background-image: url(../img/sfondo.jpg);
     height: calc(100% - 100px);
     background-color: #dbd3cd;
+    padding: 30px 100px 0 100px;
 }
 
 ul {
     list-style-type: none;
     width: 100%;
-    padding: 50px;
     display: flex;
     flex-direction: column;
 }
