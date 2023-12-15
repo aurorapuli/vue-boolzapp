@@ -199,11 +199,24 @@ createApp({
             console.log(this.contacts[this.activeContact].messages);
 
 
-            this.conversazioneUser.push({date: '10/01/2020 15:30:55', message: this.mioMessaggio, status: 'sent'});
+            this.conversazioneUser.push({ date: '10/01/2020 15:30:55', message: this.mioMessaggio, status: 'sent' });
 
 
-            this.mioMessaggio= "";
+            this.mioMessaggio = "";
 
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push({
+                    date: '10/01/2020 15:30:55',
+                    message: 'ok',
+                    status: 'received'
+                });
+
+                this.conversazioneUser.push({
+                    date: '10/01/2020 15:30:55',
+                    message: 'ok',
+                    status: 'received'
+                });
+            }, 1000);
         }
 
 
