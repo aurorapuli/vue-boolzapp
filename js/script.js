@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            searchUser: "",
 
             mioMessaggio: "",
 
@@ -178,6 +179,8 @@ createApp({
         }
     },
     methods: {
+
+        // funzione che permette di recuperare i messaggi dell'utente cliccato
         chat(i) {
             this.activeContact = i
 
@@ -192,6 +195,8 @@ createApp({
             }
 
         },
+
+        // funzione che permette di rispondere ai messaggi e riceve un messaggio
 
         sendMessage() {
 
@@ -217,6 +222,11 @@ createApp({
                     status: 'received'
                 });
             }, 1000);
+        },
+
+        filteredContacts() {
+
+            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchUser.toLowerCase()));
         }
 
 

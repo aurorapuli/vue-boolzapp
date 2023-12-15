@@ -222,3 +222,7 @@ li {
     font-size: 10px;
     align-self: flex-end;
 }
+
+.none{
+    display: none;
+}

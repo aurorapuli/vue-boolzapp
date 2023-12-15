@@ -63,14 +63,14 @@
                     <div class="search">
                         <div>
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchUser" id="searchUser">
                         </div>
 
                     </div>
 
                     <!-- section contacts -->
                     <div class="contacts">
-                        <div class="contact" v-for="(contact, i) in contacts" @click="chat(i)">
+                        <div class="contact" v-for="(contact, i) in filteredContacts()" @click="chat(i)">
                             <div class="contact-profile">
                                 <div class="img">
                                     <img :src="contact.avatar" alt="">
