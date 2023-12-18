@@ -178,7 +178,19 @@ li {
     margin-bottom: 8px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
+
+.info-message {
+    width: fit-content;
+    padding: 10px;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    background-color: white;
+    border-radius: 5px;
+}
+
 
 /* stili send message */
 .send-message {
@@ -218,11 +230,11 @@ li {
     background-color: white;
 }
 
-.orario-message{
+.orario-message {
     font-size: 10px;
     align-self: flex-end;
 }
 
-.none{
+.none {
     display: none;
 }
