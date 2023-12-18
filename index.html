@@ -114,11 +114,11 @@
                     <div class="area-testo">
                         <ul v-for="element in conversazioneUser">
                             
-                            <li :class="(element.status === 'sent' ? 'mio-text' : 'user-text')" >
+                            <li :class="(element.status === 'sent' ? 'mio-text' : 'user-text')" @click="infoMessage()">
                                {{element.message}}
                                 <div class="orario-message">{{element.date}}</div>
 
-                                <div class="info-message">
+                                <div class="info-message" :class="infoClass">
                                     <p>Message info</p>
                                     <p>Delete message</p>
                                 </div>
