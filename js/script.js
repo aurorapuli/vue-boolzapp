@@ -226,13 +226,20 @@ createApp({
             }, 1000);
         },
 
-        filteredContacts(i) {
+        filteredContacts(input) {
 
-            return this.contacts.filter(contact =>
-                contact.name.toLowerCase().includes(this.searchUser.toLowerCase())
-            );
+            // return this.contacts.filter(contact =>
+            //     contact.name.toLowerCase().includes(this.searchUser.toLowerCase())
+            // );
 
+            // Filtra gli oggetti in contacts in base al nome
+            const filteredContacts = this.contacts.filter(contact => contact.name.toLowerCase().includes(input.toLowerCase()));
 
+            // Aggiorna l'array contacts con quelli filtrati
+            this.contacts = filteredContacts;
+
+            // Ora l'array `contacts` contiene solo gli oggetti che corrispondono al nome cercato
+            console.log(this.contacts);
 
         }
 

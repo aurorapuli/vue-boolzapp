@@ -70,7 +70,7 @@
 
                     <!-- section contacts -->
                     <div class="contacts">
-                        <div class="contact" v-for="(contact, i) in filteredContacts()" @click="chat(i)">
+                        <div class="contact" v-for="(contact, i) in filteredContacts(searchUser)" @click="chat(i)">
                             <div class="contact-profile">
                                 <div class="img">
                                     <img :src="contact.avatar" alt="">
