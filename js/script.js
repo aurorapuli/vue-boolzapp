@@ -188,6 +188,8 @@ createApp({
 
             const conversazione = this.contacts[this.activeContact].messages;
 
+            console.log(conversazione);
+
 
             for (i = 0; i < conversazione.length; i++) {
                 this.conversazioneUser.push(conversazione[i])
@@ -224,9 +226,14 @@ createApp({
             }, 1000);
         },
 
-        filteredContacts() {
+        filteredContacts(i) {
 
-            return this.contacts.filter(contact => contact.name.toLowerCase().includes(this.searchUser.toLowerCase()));
+            return this.contacts.filter(contact =>
+                contact.name.toLowerCase().includes(this.searchUser.toLowerCase())
+            );
+
+
+
         }
 
 
@@ -236,4 +243,7 @@ createApp({
         console.log('pagina caricata!!');
 
     }
+
 }).mount('#app');
+
+
