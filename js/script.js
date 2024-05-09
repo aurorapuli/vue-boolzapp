@@ -3,6 +3,11 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+
+            displayUtenti: "",
+
+            infoClass: "none",
+
             searchUser: "",
 
             mioMessaggio: "",
@@ -181,19 +186,34 @@ createApp({
     methods: {
 
         // funzione che permette di recuperare i messaggi dell'utente cliccato
-        chat(i) {
-            this.activeContact = i
+        // chat(i) {
+        //     this.activeContact = i
+
+
+        //     this.conversazioneUser = [];
+
+        //     const conversazione = this.contacts[this.activeContact].messages;
+
+        //     // console.log(conversazione);
+
+
+        //     for (i = 0; i < conversazione.length; i++) {
+        //         this.conversazioneUser.push(conversazione[i])
+        //         console.log(this.conversazioneUser);
+        //     }
+
+        // },
+
+        chat(index) {
+            // Memorizza l'indice originale del contatto selezionato prima del filtraggio
+            const originalIndex = this.contacts.indexOf(this.filteredContacts()[index]);
+            this.activeContact = originalIndex;
 
             this.conversazioneUser = [];
-
             const conversazione = this.contacts[this.activeContact].messages;
 
-            console.log(conversazione);
-
-
-            for (i = 0; i < conversazione.length; i++) {
-                this.conversazioneUser.push(conversazione[i])
-                console.log(this.conversazioneUser);
+            for (let i = 0; i < conversazione.length; i++) {
+                this.conversazioneUser.push(conversazione[i]);
             }
 
         },
@@ -226,23 +246,25 @@ createApp({
             }, 1000);
         },
 
-        filteredContacts(input) {
+        filteredContacts(i) {
 
             return this.contacts.filter(contact =>
                 contact.name.toLowerCase().includes(this.searchUser.toLowerCase())
             );
 
-            // // Filtra gli oggetti in contacts in base al nome
-            // const filteredContacts = this.contacts.filter(contact => contact.name.toLowerCase().includes(input.toLowerCase()));
 
-            // // Aggiorna l'array contacts con quelli filtrati
-            // this.contacts = filteredContacts;
 
-            // // Ora l'array `contacts` contiene solo gli oggetti che corrispondono al nome cercato
-            // console.log(this.contacts);
+        },
+
+        infoMessage() {
+
+            if (this.infoClass === 'none') {
+                this.infoClass = 'block'
+            } else {
+                this.infoClass = 'none'
+            }
 
         }
-
 
 
     },

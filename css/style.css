@@ -120,6 +120,8 @@ nav {
 .contacts {
     padding: 10px;
     background-color: white;
+    height: 400px;
+    overflow-y: auto;
 }
 
 .contact {
@@ -159,9 +161,10 @@ nav {
 
 .area-testo {
     background-image: url(../img/sfondo.jpg);
-    height: calc(100% - 100px);
     background-color: #dbd3cd;
     padding: 30px 100px 0 100px;
+    overflow-y: auto;
+    height: 473px;
 }
 
 ul {
@@ -237,4 +240,8 @@ li {
 
 .none {
     display: none;
+}
+
+.active {
+    display: block;
 }
